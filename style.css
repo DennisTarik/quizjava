@@ -1,0 +1,31 @@
+.quiz {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    background-color: rgb(116, 137, 255);
+}
+.title {
+    display: grid;
+    background-color: rgb(26, 64, 190);
+    font-size: 3rem;
+    border-radius: 2rem;
+    padding: 1rem;
+}
+p {
+    font-size: 2rem;
+}
+.answer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+}
+.yes {
+    background-color: green;
+    margin: 1rem;
+    padding: 1rem;
+}
+.no {
+    background-color: red;
+    margin: 1rem;
+    padding: 1rem;
+}
