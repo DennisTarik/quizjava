@@ -5,9 +5,17 @@ myQuestion.textContent = "Hast du Emotionen?";
 
 const yesButton = document.querySelector(".yes")
 yesButton.onclick = function() {
-    alert('Herzlichen Glückwunsch du bist ein Mensch!');
-}
+    if (correctAnswer === true) {
+         alert('Herzlichen Glückwunsch du bist ein Mensch!');
+    } else {
+        alert("Falsche Antwort");
+    }
+};
 const noButton = document.querySelector(".no")
 noButton.onclick = function() {
-    alert("Herzlichen Glückwunsch du bist ein Roboter!");
-}
+    if (correctAnswer === false) {
+        alert("Herzlichen Glückwunsch du bist ein Roboter!");
+    } else {
+        alert("Falsche Antwort");
+    }
+};
