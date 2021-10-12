@@ -46,7 +46,7 @@ function showAnswerIsCorrect () {
     resultElement.textContent = "Deine Antwort ist richtig!";
     resultElement.className = "correct";
     document.body.appendChild(resultElement);
-    setTimeout(setNewQuestion, 500);
+    setTimeout(setNewQuestion, 1500);
 }
 function showAnswerIsIncorrect () {
     const resultElement = document.createElement("p");
