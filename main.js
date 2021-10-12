@@ -3,7 +3,7 @@ const correctAnswer = true;
 const myQuestion = document.querySelector(".question");
 myQuestion.textContent = "Hast du Emotionen?";
 
-const yesButton = document.querySelector(".yes")
+/* const yesButton = document.querySelector(".yes")
 yesButton.onclick = function() {
     if (correctAnswer === true) {
          alert('Herzlichen Glückwunsch du bist ein Mensch!');
@@ -18,4 +18,12 @@ noButton.onclick = function() {
     } else {
         alert("Falsche Antwort");
     }
-};
+}; */
+document.body.onload = addElement;
+function addElement () {
+    const newP = document.createElement("p");
+    const newContent = document.createTextNode("Deine Antwort ist richtig!");
+    newP.appendChild(newContent);
+    const currentP = document.getElementById("p1");
+    document.body.insertBefore(newP, currentP);
+}
