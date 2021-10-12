@@ -29,3 +29,15 @@ p {
     margin: 1rem;
     padding: 1rem;
 }
+.correct {
+    color: green;
+    background-color: rgb(26, 64, 190);
+    border-radius: 2rem;
+    padding: 1.5rem;
+}
+.incorrect {
+    color: red;
+    background-color: rgb(26, 64, 190);
+    border-radius: 2rem;
+    padding: 1.5rem;
+}

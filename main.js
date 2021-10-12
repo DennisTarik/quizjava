@@ -1,29 +1,34 @@
 const correctAnswer = true;
 
 const myQuestion = document.querySelector(".question");
-myQuestion.textContent = "Hast du Emotionen?";
+myQuestion.textContent = "Bist du ein Mensch?";
 
-/* const yesButton = document.querySelector(".yes")
-yesButton.onclick = function() {
+const yesButton = document.querySelector(".yes")
+yesButton.onclick = function () {
     if (correctAnswer === true) {
-         alert('Herzlichen Glückwunsch du bist ein Mensch!');
+    showAnswerIsCorrect()
     } else {
-        alert("Falsche Antwort");
+    showAnswerIsIncorrect()
     }
-};
+}; 
 const noButton = document.querySelector(".no")
-noButton.onclick = function() {
+noButton.onclick = function () {
     if (correctAnswer === false) {
-        alert("Herzlichen Glückwunsch du bist ein Roboter!");
+    showAnswerIsCorrect()
     } else {
-        alert("Falsche Antwort");
+    showAnswerIsIncorrect()
     }
-}; */
-document.body.onload = addElement;
-function addElement () {
-    const newP = document.createElement("p");
-    const newContent = document.createTextNode("Deine Antwort ist richtig!");
-    newP.appendChild(newContent);
-    const currentP = document.getElementById("p1");
-    document.body.insertBefore(newP, currentP);
+}; 
+
+function showAnswerIsCorrect () {
+    const resultElement = document.createElement("p");
+    resultElement.textContent = "Deine Antwort ist richtig!";
+    resultElement.className = "correct";
+    document.body.appendChild(resultElement);
+}
+function showAnswerIsIncorrect () {
+    const resultElement = document.createElement("p");
+    resultElement.textContent = "Deine Antwort ist falsch!";
+    resultElement.className = "incorrect";
+    document.body.appendChild(resultElement);
 }
