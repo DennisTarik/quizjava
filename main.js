@@ -1,11 +1,11 @@
 const questionList = [
-    "Are you a Fish",
-    "Are you a Cat",
-    "Are you a Human",
-    "Are you a Dog",
-    "Are you a Camel",
-    "Are you a Bird",
-    "Are you a Cyborg"
+    "Bist du ein neuer Fisch?",
+    "Findet dein Kurs lokal statt?",
+    "Bist du am coden interessiert?",
+    "Stört es dich lange vor dem PC zu sitzen?",
+    "Ist die Erde flach?",
+    "Ist Wasser nass?",
+    "Bist du ein Mensch?"
 ];
 
 let questionIndex = 0
@@ -46,7 +46,7 @@ function showAnswerIsCorrect () {
     resultElement.textContent = "Deine Antwort ist richtig!";
     resultElement.className = "correct";
     document.body.appendChild(resultElement);
-    setTimeout(setNewQuestion, 1500);
+    setTimeout(setNewQuestion, 0);
 }
 function showAnswerIsIncorrect () {
     const resultElement = document.createElement("p");
@@ -68,7 +68,7 @@ function setNewQuestion () {
 }
 function quizend () {
     if (questionIndex === 7) {
-        document.body.removeChild(document.querySelector(".answer"));
+        document.body.removeChild(document.querySelector(id="answer"));
         const endElement = document.createElement("h1");
         endElement.textContent = "Herzlichen Glückwunsch!!!";
         endElement.className = "finish";

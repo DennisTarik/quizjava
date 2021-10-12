@@ -1,11 +1,15 @@
-body {
+.body {
     display: grid;
     align-items: center;
     justify-items: center;
 }
+.question {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}  
 .quiz {
-    height: 35rem;
-    width: 25rem;
+    height: 25rem;
+    width: 20rem;
     border-radius: 2rem;
     display: grid;
     align-items: center;
