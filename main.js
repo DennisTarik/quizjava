@@ -10,6 +10,7 @@ yesButton.onclick = function () {
     } else {
     showAnswerIsIncorrect()
     }
+    disableButtons();
 }; 
 const noButton = document.querySelector(".no")
 noButton.onclick = function () {
@@ -18,6 +19,7 @@ noButton.onclick = function () {
     } else {
     showAnswerIsIncorrect()
     }
+    disableButtons();
 }; 
 
 function showAnswerIsCorrect () {
@@ -31,4 +33,8 @@ function showAnswerIsIncorrect () {
     resultElement.textContent = "Deine Antwort ist falsch!";
     resultElement.className = "incorrect";
     document.body.appendChild(resultElement);
+}
+function disableButtons () {
+    yesButton.disabled = true;
+    noButton.disabled = true;
 }
