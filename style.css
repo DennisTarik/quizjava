@@ -41,3 +41,29 @@ p {
     border-radius: 2rem;
     padding: 1.5rem;
 }
+
+.finish {
+    animation: 1s infinite ease-in-out alternate fadeIn,
+        2s infinite ease-in-out alternate bounce;
+}
+
+@keyframes fadeIn {
+    from {
+      opacity: 0.3;
+    }
+    to {
+      opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(-2rem);
+    }
+    50% {
+        transform: translateY(0rem);
+    }
+    100% {
+        transform: translateY(2rem);
+    }
+}
