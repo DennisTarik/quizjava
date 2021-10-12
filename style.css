@@ -1,4 +1,12 @@
+body {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
 .quiz {
+    height: 35rem;
+    width: 25rem;
+    border-radius: 2rem;
     display: grid;
     align-items: center;
     justify-items: center;
