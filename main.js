@@ -1,4 +1,4 @@
-const questionList = [
+/* const questionList = [
     "Bist du ein neuer Fisch?",
     "Findet dein Kurs lokal statt?",
     "Bist du am coden interessiert?",
@@ -18,6 +18,36 @@ const answerList = [
     false,
     true,
     true,
+] */
+const questions = [
+    {
+        question: "Bist du ein neuer Fisch?",
+        answer: true,
+    },
+    {
+        question: "Findet dein Kurs lokal statt?",
+        answer: false,
+    },
+    {
+        question: "Bist du am coden interessiert?",
+        answer: true,
+    },
+    {
+        question: "Stört es dich lange vor dem PC zu sitzen?",
+        answer: false,
+    },
+    {
+        question: "Ist die Erde flach?",
+        answer: false,
+    },
+    {
+        question: "Ist Wasser nass?",
+        answer: true,
+    },
+    {
+        question: "Bist du ein Mensch?",
+        answer: true,
+    }
 ]
 
 let correctAnswer = answerList[questionIndex]
@@ -47,7 +77,7 @@ function showAnswerIsCorrect () {
     resultElement.textContent = "Richtige Antwort!";
     resultElement.className = "correct";
     document.querySelector(".quiz").appendChild(resultElement);
-    setTimeout(setNewQuestion, 0);
+    setTimeout(setNewQuestion, 1500);
 }
 function showAnswerIsIncorrect () {
     const resultElement = document.createElement("p");
