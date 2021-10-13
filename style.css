@@ -1,20 +1,24 @@
-.body {
-    display: grid;
-    align-items: center;
-    justify-items: center;
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
 }
 .question {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
     padding-left: 1rem;
     padding-right: 1rem;
 }  
 .quiz {
-    height: 25rem;
-    width: 20rem;
     border-radius: 2rem;
     display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     align-items: center;
     justify-items: center;
     background-color: rgb(116, 137, 255);
+    width: 100vw;
+    height: 100vh;
 }
 .title {
     display: grid;
@@ -23,13 +27,19 @@
     border-radius: 2rem;
     padding: 1rem;
 }
+.progress {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
 p {
     font-size: 2rem;
 }
 .answer {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    
+    justify-content: center;
+    align-items: center;
 }
 .yes {
     background-color: green;
@@ -46,15 +56,20 @@ p {
     background-color: rgb(26, 64, 190);
     border-radius: 2rem;
     padding: 1.5rem;
+    width: 100wh;
 }
 .incorrect {
     color: red;
     background-color: rgb(26, 64, 190);
     border-radius: 2rem;
     padding: 1.5rem;
+    width: 100wh;
 }
-
 .finish {
+    padding-top: 60%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
     animation: 1s infinite ease-in-out alternate fadeIn,
         2s infinite ease-in-out alternate bounce;
 }

@@ -20,10 +20,11 @@ const answerList = [
     true,
 ]
 
-let correctAnswer = answerList[0]
+let correctAnswer = answerList[questionIndex]
 
 const myQuestion = document.querySelector(".question");
 myQuestion.textContent = questionList[0];
+updateProgress();
 
 const yesButton = document.querySelector(".yes")
 yesButton.onclick = function () {
@@ -43,16 +44,16 @@ noButton.onclick = function () {
 }; 
 function showAnswerIsCorrect () {
     const resultElement = document.createElement("p");
-    resultElement.textContent = "Deine Antwort ist richtig!";
+    resultElement.textContent = "Richtige Antwort!";
     resultElement.className = "correct";
-    document.body.appendChild(resultElement);
-    setTimeout(setNewQuestion, 0);
+    document.querySelector(".quiz").appendChild(resultElement);
+    setTimeout(setNewQuestion, 1500);
 }
 function showAnswerIsIncorrect () {
     const resultElement = document.createElement("p");
-    resultElement.textContent = "Deine Antwort ist falsch!";
+    resultElement.textContent = "Falsche Antwort!";
     resultElement.className = "incorrect";
-    document.body.appendChild(resultElement);
+    document.querySelector(".quiz").appendChild(resultElement);
     disableButtons();
 }
 function disableButtons () {
@@ -63,15 +64,22 @@ function setNewQuestion () {
     questionIndex += 1;
     myQuestion.textContent = questionList[questionIndex];
     correctAnswer = answerList[questionIndex];
-    document.body.removeChild(document.querySelector(".correct"))
+    document.querySelector(".quiz").removeChild(document.querySelector(".correct"))
+    updateProgress();
     quizend();
+}
+function updateProgress() {
+    const progressElement = document.querySelector(".progress");
+    progressElement.textContent = `Question ${questionIndex + 1}/${questionList.length}`;
 }
 function quizend () {
     if (questionIndex === 7) {
-        document.body.removeChild(document.querySelector(id="answer"));
-        const endElement = document.createElement("h1");
+        document.querySelector(".quiz")
+        .removeChild(document.querySelector(".answer"));
+        document.querySelector(".quiz")
+        .removeChild(document.querySelector(".progress"));
+        const endElement = document.querySelector(".question");
         endElement.textContent = "Herzlichen Glückwunsch!!!";
         endElement.className = "finish";
-        document.body.appendChild(endElement);
     } else {}
 }
