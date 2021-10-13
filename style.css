@@ -1,15 +1,3 @@
-body {
-    width: 100vw;
-    height: 100vh;
-    margin: 0;
-}
-.question {
-    display: table-cell;
-    vertical-align: middle;
-    text-align: center;
-    padding-left: 1rem;
-    padding-right: 1rem;
-}  
 .quiz {
     border-radius: 2rem;
     display: grid;
@@ -17,8 +5,8 @@ body {
     align-items: center;
     justify-items: center;
     background-color: rgb(116, 137, 255);
-    width: 100vw;
-    height: 100vh;
+    width: 95wh;
+    height: 98vh;
 }
 .title {
     display: grid;
@@ -32,6 +20,14 @@ body {
     justify-content: center;
     align-items: center;
 }
+.question {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 2rem;
+}  
 p {
     font-size: 2rem;
 }
@@ -43,13 +39,17 @@ p {
 }
 .yes {
     background-color: green;
+    width: 8rem;
     margin: 1rem;
     padding: 1rem;
+    font-size: 2rem;
 }
 .no {
     background-color: red;
+    width: 8rem;
     margin: 1rem;
     padding: 1rem;
+    font-size: 2rem;
 }
 .correct {
     color: green;
